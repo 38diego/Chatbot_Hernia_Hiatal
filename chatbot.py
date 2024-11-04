@@ -206,7 +206,7 @@ def format_message1(text):
             articulo = articulo[:len(articulo)-4]
             return f" ['<a href=\"{autores[articulo]['Link']}\">{articulo}</a>', {autores[articulo]['Autor']} et al.] " #, p{int(match.group(2))+1}] 
         else:
-            return match.group(0)
+            return ""
 
     return re.sub(citation_pattern, replace_citation, text)
 
@@ -230,7 +230,7 @@ def format_message2(text):
             articulo = articulo[:len(articulo)-4]
             return f" ['<a href=\"{autores[articulo]['Link']}\">{articulo}</a>', {autores[articulo]['Autor']} et al.] " #, p{int(match.group(2))+1}] 
         else:
-            return match.group(0)
+            return ""
 
     return re.sub(citation_pattern, replace_citation, text)
 
